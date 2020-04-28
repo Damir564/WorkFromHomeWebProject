@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Work From Home{% endblock %}
+{% block content %}
+<meta charset="utf-8">
+    <link href="{{ url_for('static', filename='clean-blog.min.css') }}" rel="stylesheet">
+<br><br><br>
+<header class="masthead" style="background-image: url('{{ url_for('static', filename='background-1.jpg') }}')">
+    <div class="site-heading">
+              <h2>WorkFromHome</h2>
+              <span class="subheading">Home Page</span>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading">
+                <div class="container">
+                  <div class="row">
+                    <div class="col text-center">
+                      <a href="http://127.0.0.1:5000/login" class="btn btn-primary btn-lg btn-block">Войти</a>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <div class="container">
+                  <div class="row">
+                    <div class="col text-center">
+                      <a href="http://127.0.0.1:5000/registration" class="btn btn-info btn-lg btn-block">Зарегистироваться</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+{% endblock %}

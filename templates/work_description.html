@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{work.name[:15]}}...</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+</head>
+<body>
+    <div>
+        <a href={{url_for("project", project_name=project_name)}} class="btn btn-primary   btn-xs"><-Back</a>
+    </div>
+    <blockquote class="blockquote text-right">
+  <p class="mb-0">{{work.description}}</p>
+  <footer class="blockquote-footer">{{work.name}}<cite title="Source Title"></cite></footer>
+</blockquote>
+</body>
+</html>

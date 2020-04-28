@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <title>{% block title %}Авторизация{% endblock %}</title>
+</head>
+<body>
+    {% block content %}
+    <div>
+        <a href="http://127.0.0.1:5000/" class="btn btn-primary   btn-xs"><-Home</a>
+    </div>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% for category, message in messages %}
+            <div class="col-md-16">
+                <div class="col-md-12">
+                    <center><h5><div class="text-warning" class="{{ category }}">{{ message }}</div></h5></center>
+                </div>
+            </div>
+        {% endfor %}
+    {% endwith %}
+    <div id="login">
+        <h3 class="text-center text-white pt-5">Login form</h3>
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <form id="login-form" class="form" action="" method="post">
+                            <h3 class="text-center text-info">Авторизация</h3>
+                            <div class="form-group">
+                                <label for="email" class="text-info">Электронная почта:</label><br>
+                                <input type="text" name="email" id="email" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="text-info">Пароль:</label><br>
+                                <input type="password" name="password" id="password" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-primary" type="submit" name="submit" class="btn btn-primary btn-md" value="submit">Войти</button>
+                            </div>
+                            <div id="register-link" class="text-right">
+                                <a href="http://127.0.0.1:5000/registration" class="btn btn-info btn-md" class="text-info">Зарегистрироваться</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>
