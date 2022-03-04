@@ -1,1 +1,1 @@
-# Yandex_Web_Project
+# WorkFromHomeWebProject
